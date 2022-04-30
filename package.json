@@ -3,12 +3,13 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "engines" : { 
-    "node" : " 14.19.1"
+  "engines": {
+    "node": " 14.19.1"
   },
   "scripts": {
     "start": "node src/index.js",
-    "dev": "env-cmd ./config/dev.env nodemon src/index.js"
+    "dev": "env-cmd ./config/dev.env nodemon src/index.js",
+    "test": "jest"
   },
   "author": "",
   "license": "ISC",
@@ -27,6 +28,7 @@
   },
   "devDependencies": {
     "env-cmd": "^8.0.2",
+    "jest": "^23.6.0",
     "nodemon": "^1.18.9"
   }
 }
