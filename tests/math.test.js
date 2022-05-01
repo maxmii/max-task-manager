@@ -1,7 +1,9 @@
+const { async } = require('jshint/src/prod-params')
 const {
     calculateTip,
     fahrenheitToCelsius,
-    celsiusToFahrenheit
+    celsiusToFahrenheit,
+    add
 } = require('../src/math')
 
 test('Should calculate total with tip', () => {
@@ -25,13 +27,35 @@ test('should calculate default total tip', () => {
 =======
 })
 
-test('should convert 32F to 0C', () => {
+test('should convert 32F to 0 ', () => {
     const temp = fahrenheitToCelsius(32)
     expect(temp).toBe(0)
 })
 
-test('should convert 0C to 32F', () => {
+test('should convert 0 C to 32F', () => {
     const temp = celsiusToFahrenheit(0)
     expect(temp).toBe(32)
+<<<<<<< HEAD
 >>>>>>> 67c2b1a (Add more tests)
+=======
+})
+
+// test('Async test demo', (done) => {
+//     setTimeout(() => {
+//         expect(1).toBe(2)
+//         done()
+//     }, 2000)
+// })
+
+test('Should add two numbers', (done) => {
+    add(2, 3).then((sum) => {
+        expect(sum).toBe(5)
+        done()
+    })
+})
+
+test('Should add two numbers async/await', async () => {
+    const sum = await add(10, 22)
+    expect(sum).toBe(32)
+>>>>>>> ac8fd66 (Save changes)
 })
