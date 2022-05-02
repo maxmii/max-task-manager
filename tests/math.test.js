@@ -1,43 +1,23 @@
-const { async } = require('jshint/src/prod-params')
-const {
-    calculateTip,
-    fahrenheitToCelsius,
-    celsiusToFahrenheit,
-    add
-} = require('../src/math')
+const { calculateTip, celsiusToFahrenheit, fahrenheitToCelsius, add } = require('../src/math')
 
 test('Should calculate total with tip', () => {
-    const total = calculateTip(10, 0.3)
+    const total = calculateTip(10, .3)
     expect(total).toBe(13)
 })
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-tset('This should fail', () => {
-=======
-test('This should fail', () => {
->>>>>>> 6f3cd30 (add test directory)
-    throw new Error('Failure')
-=======
-test('should calculate default total tip', () => {
+test('Should calculate total with default tip', () => {
     const total = calculateTip(10)
     expect(total).toBe(12.5)
-<<<<<<< HEAD
->>>>>>> d73d341 (Add tests to test function for math.js)
-=======
 })
 
-test('should convert 32F to 0 ', () => {
+test('Should convert 32 F to 0 C', () => {
     const temp = fahrenheitToCelsius(32)
     expect(temp).toBe(0)
 })
 
-test('should convert 0 C to 32F', () => {
+test('Should convert 0 C to 32 F', () => {
     const temp = celsiusToFahrenheit(0)
     expect(temp).toBe(32)
-<<<<<<< HEAD
->>>>>>> 67c2b1a (Add more tests)
-=======
 })
 
 // test('Async test demo', (done) => {
@@ -56,6 +36,5 @@ test('Should add two numbers', (done) => {
 
 test('Should add two numbers async/await', async () => {
     const sum = await add(10, 22)
-    expect(sum).toBe(32)
->>>>>>> ac8fd66 (Save changes)
+    expect(sum).toBe(32)  
 })
